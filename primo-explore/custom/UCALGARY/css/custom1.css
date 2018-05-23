@@ -1,0 +1,68 @@
+/*Top Banner Background Color */
+
+.prm-primary-bg.prm-hue1, prm-spinner.prm-hue1, prm-spinner.prm-hue1.overlay-cover.light-on-dark:after, prm-topbar .top-nav-bar, prm-search-bar.prm-hue1 {background-color: #6e6761; }
+
+/*!!!!!!!  TOPBAR - USER AREA - HOVER COLOR !!!!!!!!*/
+md-fab-toolbar md-toolbar {
+    background-color: #6e6761!important;
+    pointer-events: none;
+    z-index: 23;
+}
+
+/*!!!!!!!  TOPBAR - USER AREA - MY LIBRARY CARD COLOR !!!!!!!!*/
+div.top-nav-bar, md-fab-trigger.align-with-text.show-user-info, md-fab-trigger.align-with-text.show-user-info::after {
+    background-color: #6e6761!important;
+}
+
+
+/* Magnifying glass */
+#magnifying-glass {color: #6e6761;}
+
+/*Search Bar Wrapper color */
+prm-search-bar, prm-atoz-search-bar, prm-journals-search-bar, prm-browse-search-bar, prm-tags-search-bar {
+    background-color: #847b75;
+}
+
+/* Expand logo size */
+prm-logo .product-logo, prm-logo img {
+    padding: .5em .1em .3em .5em;
+}
+
+/*Hide Tags in Detailed Display*/
+[aria-label="Tags"]{display:none;}
+#tags{display:none;}
+
+/* REORDER DETAILED DISPLAY */
+
+.full-view-inner-container {
+    padding-bottom: 10em;
+    display: flex;
+    flex-direction: column;
+}
+
+/*RE-order the Center Sections */
+#getit_link1_0 { order: 0; }
+#getit_link2_0 { order: 1; }
+#action_list{ order: 2; }
+#details { order: 3; }
+#links { order: 5; }
+#virtualBrowse { order: 4; }
+
+/*re-order the Left Navigation on the Detailed Page */
+[aria-label="Online Access"] { order: 0 !important; }
+[aria-label="In the library"] { order: 1 !important; }
+[aria-label="Send to"] { order: 2 !important; }
+[aria-label="Details"] { order: 3 !important; }
+[aria-label="Links"] { order: 5 !important; }
+[aria-label="Virtual Browse"] { order: 4 !important; }
+
+/*Added to hide holdings dropdowns where we have no content */
+
+li.width7.bold { display: none; visibility: hidden !important; }
+select #selectYear { display: none !important; visibility: hidden !important; }
+#selectYear { display: none !important; visibility: hidden !important; }
+.filterResults #selectYear { display: none !important; visibility: hidden; }
+ul.internalSection.formView.clearfix.filterResults .width15, ul.internalSection.formView.clearfix.filterResults .width7 { display: none !important; visibility: hidden !important; }
+.icon-link{text-decoration: none !important;}
+.icon-link:hover{background-color: transparent; text-decoration: none !important;}
+.icon-link a:hover{background-color: transparent; text-decoration: none !important;}
