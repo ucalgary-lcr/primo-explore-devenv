@@ -110,7 +110,7 @@
       '<img class="logo-image" alt="{{::(&apos;nui.header.LogoAlt&apos; | translate)}}" ng-src="custom/NUdev/img/nu-libraries-logo.svg"/></a>' +
       '<a href="/primo-explore/search?vid={{$ctrl.getView()}}">' +
       '<img class="logo-image sos" alt="{{::(&apos;nui.header.LogoAlt&apos; | translate)}}" ng-src="custom/NUdev/img/sosbold.svg"/></a></div>'
-    });*&/
+    });*/
     /*end make lib logo clickable*/
 
     /*add report a problem*/
@@ -134,11 +134,9 @@
                 vm.prmActionCtrl.actionListService.actionsToDisplay.unshift("report_a_problem");
                 vm.prmActionCtrl.actionListService.actionsToIndex["report_a_problem"] = 8;
             }
-            if (vm.prmActionCtrl.$state.$current.locals.globals.$stateParams.vid == "NU") { //if using prod view, use prod links
-                //var url = "http://library.northeastern.edu/get-help/tech-support/report-a-problem?resource="+vm.prmActionCtrl.item.pnx.display.title[0]+" (http://northeastern-primo.hosted.exlibrisgroup.com/primo-explore/fulldisplay?"+encodeURIComponent("docid="+vm.prmActionCtrl.item.pnx.control.recordid+"&context=L&vid=NUdev&search_scope=new_everything_scope&tab=default_tab&lang=en_US")+")";
+            if (vm.prmActionCtrl.$state.$current.locals.globals.$stateParams.vid == "UCALGARY") { //if using prod view, use prod links
                 var url = "https://lms.library.ucalgary.ca/report-problem/index.php?resource="+vm.prmActionCtrl.item.pnx.display.title[0]+"&docID="+encodeURIComponent(vm.prmActionCtrl.item.pnx.control.recordid);
             } else { //not prod view, don't use prod links
-                //var url = "http://librarydev.neu.edu/get-help/tech-support/report-a-problem?resource="+vm.prmActionCtrl.item.pnx.display.title[0]+" (http://northeastern-primostaging.hosted.exlibrisgroup.com/primo-explore/fulldisplay?"+encodeURIComponent("docid="+vm.prmActionCtrl.item.pnx.control.recordid+"&context=L&vid=NUdev&search_scope=new_everything_scope&tab=default_tab&lang=en_US")+")";
                 var url = "https://lms.library.ucalgary.ca/report-problem/index.php?resource="+vm.prmActionCtrl.item.pnx.display.title[0]+"&docID="+encodeURIComponent(vm.prmActionCtrl.item.pnx.control.recordid);
             }
             if (vm.prmActionCtrl.actionListService.onToggle){
@@ -182,12 +180,10 @@
                 vm.prmBriefResultCtrl.upFrontActionsService.requiredUpFrontActionsList[index - (index -1)] = vm.prmBriefResultCtrl.upFrontActionsService.requiredUpFrontActionsList[0]
                 vm.prmBriefResultCtrl.upFrontActionsService.requiredUpFrontActionsList[0] = "report_a_problem";
             }
-            if (vm.prmBriefResultCtrl.searchService.vid == "NU") { //if using prod view, use prod links
-                //var url = "http://library.northeastern.edu/get-help/tech-support/report-a-problem?resource="+vm.prmBriefResultCtrl.item.pnx.display.title[0]+" (http://northeastern-primo.hosted.exlibrisgroup.com/primo-explore/fulldisplay?"+encodeURIComponent("docid="+vm.prmBriefResultCtrl.item.pnx.control.recordid+"&context=L&vid=NUdev&search_scope=new_everything_scope&tab=default_tab&lang=en_US")+")";
-                var url = "https://lms.library.ucalgary.ca/report-problem/index.php?resource="+vm.prmActionCtrl.item.pnx.display.title[0]+"&docID"+encodeURIComponent(vm.prmActionCtrl.item.pnx.control.recordid);
+            if (vm.prmBriefResultCtrl.searchService.vid == "UCALGARY") { //if using prod view, use prod links
+                var url = "https://lms.library.ucalgary.ca/report-problem/index.php?resource="+vm.prmBriefResultCtrl.item.pnx.display.title[0]+"&docID="+encodeURIComponent(vm.prmBriefResultCtrl.item.pnx.control.recordid);
             } else { //not prod view, don't use prod links
-                //var url = "http://librarydev.neu.edu/get-help/tech-support/report-a-problem?resource="+vm.prmBriefResultCtrl.item.pnx.display.title[0]+" (http://northeastern-primostaging.hosted.exlibrisgroup.com/primo-explore/fulldisplay?"+encodeURIComponent("docid="+vm.prmBriefResultCtrl.item.pnx.control.recordid+"&context=L&vid=NUdev&search_scope=new_everything_scope&tab=default_tab&lang=en_US")+")";
-                var url = "https://lms.library.ucalgary.ca/report-problem/index.php?resource="+vm.prmActionCtrl.item.pnx.display.title[0]+"&docID"+encodeURIComponent(vm.prmActionCtrl.item.pnx.control.recordid);
+                var url = "https://lms.library.ucalgary.ca/report-problem/index.php?resource="+vm.prmBriefResultCtrl.item.pnx.display.title[0]+"&docID="+encodeURIComponent(vm.prmBriefResultCtrl.item.pnx.control.recordid);
             }
             vm.prmBriefResultCtrl.openTab = function(e, t){
                 e.stopPropagation();
